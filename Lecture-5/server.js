@@ -33,6 +33,8 @@ app.use(function (req, res, next) {
     next();
 });
 
+var tableData = [];
+
 // Setup your routes here!
 
 app.get("/", function (request, response) {
@@ -49,12 +51,12 @@ app.get("/all_the_forms", function (request, response) {
     response.render('pages/forms', { pageTitle: "Testing all the inputs" });
 });
 
-app.post("/all_the_forms", function (request, response) {
-    var tableData = [];
-    
+app.post("/all_the_forms", function (request, response) {    
     // our request.body will get populated as an object
     for (var key in request.body) {
         var data = request.body[key];
+        console.log(key);
+        console.log(request.body[key]);
         var entry = {
             inputName: key,
             inputValue: JSON.stringify(data),
