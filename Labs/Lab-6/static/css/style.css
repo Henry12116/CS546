@@ -1,0 +1,74 @@
+/* Styles I have provided: */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18pt;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h5 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+h6 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+main {
+    width: 60%;
+}
+
+/* Styles you create */
+.content {
+    padding-left: 50pt;
+    padding-right: 50pt;
+}
+
+body {
+    color: #333;
+    font-size: 15pt;
+}
+
+section .chapter {
+    border-top: solid;
+    padding: 20pt 0pt 20pt 0pt;
+}
+
+footer {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+}
+
+a {
+    color: #44609D;
+}
+
+ul {
+    padding-left: 0px;
+    list-style: none;
+}

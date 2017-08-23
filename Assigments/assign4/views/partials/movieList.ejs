@@ -1,0 +1,8 @@
+ 			<h2><%= pageTitle %></h2>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">            
+                <% movieItems.forEach(function(todoItem){ %>
+                    <% include ../partials/todo_item %>
+                <% }) %>
+                </div>
+            </div>

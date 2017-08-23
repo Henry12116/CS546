@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+        </header>
+        <main>
+            <div id="main">
+                <h2><%= pageTitle %></h2>
+                <div class="row">
+                    <div>
+                        <div class="col-sm-12 col-md-6">
+                            <% movieItems.forEach(function(todoItem){ %>
+                                <% include ../partials/todo_item %>
+                                    <% }) %>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3>Filter Movies</h3>
+                <div class="col-sm-12 col-md-4">
+                    <form style="display:inline" id="new-item-form">
+                        <input type="submit" value="All Movies" />
+                    </form>
+                    <form style="display:inline" id="new-item-form2">
+                        <input type="submit" value="Popular Movies" />
+                    </form>
+                </div>
+                <hr>
+                <h3>Enter New Movie</h3>
+                <div class="col-sm-12 col-md-4">
+                    <form style="display:inline" id="new-item-form3">
+                        <label>Movie Name
+                            <input id="title" type="text" placeholder="Movie Name" />
+                        </label>
+                        <label>Movie Rating
+                            <input id="rating" type="number" placeholder="Movie Rating" min="1" max="5" />
+                        </label>
+
+                        <input type="submit" value="Create!" />
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <% include ../partials/scripts %>
+</body>
+
+</html>

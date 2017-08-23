@@ -1,0 +1,29 @@
+/* Screen Sizes: 
+    Small - 708px 
+    Medium - 992px
+    Large - 1200px 
+*/
+
+@media screen and (min-width: 708px) {
+    .column {
+        float: left;
+        margin: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .column {
+        float: left;
+        margin: 5px;
+        width: 33%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .column {
+        float: left;
+        margin: 5px;
+        width: 30%;
+    }
+}
