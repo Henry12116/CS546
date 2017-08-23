@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+    <div class="container">
+        <% include ../partials/header %>
+            <hr/>
+            <main>
+                <h2><%= operationTitle%></h2>
+                <h3><%= errorType %></h2>
+
+                <p>
+                    <%= errorMessage %>
+                </p>
+            </main>
+            <a href="/">Back</a>
+    </div>
+
+    <% include ../partials/scripts %>
+</body>
+
+</html>

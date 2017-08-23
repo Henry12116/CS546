@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+    <div class="container">
+        <% include ../partials/header %>
+
+            <main>
+                <h2><%= type %></h2>
+                <hr/>
+                <section>
+                    <!--Retirement Savings Form-->
+                    <h2>Calculate Retirement Savings</h2>
+                    <form action="/results/perMonthRetirementSavings" method="post">
+                        <div>
+                            <label for="yearsUntilRetirementT">Years Until Retirement:</label>
+                            <input type="text" id="years" name="years" />
+                        </div>
+                        <div>
+                            <label for="amountSavingPerMonth">Savings Deposited per Month:</label>
+                            <input type="text" id="savings" name="savings" />
+                        </div>
+                        <div>
+                            <label for="yearlyInterestRateOfInvestment">Yearly Interest Rate:</label>
+                            <input type="text" id="interest1" name="interest1" />
+                        </div>
+                        <div class="button">
+                            <button type="submit" id="retire">Calculate</button>
+                        </div>
+                    </form>
+
+                    <!--Invenstment Form-->
+                    <h2>Calculate Investment Growth</h2>
+                    <form action="/results/investedAmount" method="post">
+                        <div>
+                            <label for="yearsInvesting">Years Investing:</label>
+                            <input type="text" id="totYears" name="totYears" />
+                        </div>
+                        <div>
+                            <label for="initialAmount">Savings Deposited per Month:</label>
+                            <input type="text" id="amount" name="amount" />
+                        </div>
+                        <div>
+                            <label for="yearlyInterestRateOfInvestment">Yearly Interest Rate:</label>
+                            <input type="text" id="interest2" name="interest2" />
+                        </div>
+                        <div class="button">
+                            <button type="submit" id="invest">Calculate</button>
+                        </div>
+                    </form>
+
+                    <!--Loan Payoff Form-->
+                    <h2>Calculate Time To Repay Loan</h2>
+                    <form action="/results/loanPayoff" method="post">
+                        <div>
+                            <label for="monthlyPaymentAmount">Monthly Payment Amount:</label>
+                            <input type="text" id="monthlyAmount" name="monthlyAmount" />
+                        </div>
+                        <div>
+                            <label for="initialLoanAmount">Initial Loan Amount:</label>
+                            <input type="text" id="loan" name="loan" />
+                        </div>
+                        <div>
+                            <label for="yearlyInterestRateOfInvestment">Yearly Interest Rate:</label>
+                            <input type="text" id="interest3" name="interest3" />
+                        </div>
+                        <div class="button">
+                            <button type="submit" id="loans">Calculate</button>
+                        </div>
+                    </form>
+                </section>
+                <div class="alert alert-danger calculator-alerts hidden" id="calculator-error">
+                </div>
+                <div class="alert alert-success calculator-alerts hidden" id="calculator-result">
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            </main>
+    </div>
+    <% include ../partials/scripts %>
+    <script src="./static/js/validators.js"></script>
+</body>
+
+</html>
